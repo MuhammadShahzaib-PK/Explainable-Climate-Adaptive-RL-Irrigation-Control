@@ -1,0 +1,62 @@
+{
+  "n_years": 22,
+  "baseline_comparison": [
+    {
+      "Condition": "PPO (trained)",
+      "mean_reward": -42.95866252596745,
+      "ci_lo": -44.689358214158524,
+      "ci_hi": -41.15094413215825
+    },
+    {
+      "Condition": "Never irrigate",
+      "mean_reward": -277.03984701436644,
+      "ci_lo": -282.12045247430626,
+      "ci_hi": -272.8072472830409
+    },
+    {
+      "Condition": "Always light",
+      "mean_reward": -240.67701486141243,
+      "ci_lo": -240.7855770842541,
+      "ci_hi": -240.4668368645929
+    },
+    {
+      "Condition": "Always heavy",
+      "mean_reward": -249.3355688463275,
+      "ci_lo": -249.3382547838275,
+      "ci_hi": -249.33257091308892
+    }
+  ],
+  "granger_causality": {
+    "TempAnomaly_C": {
+      "n": 22,
+      "p": 0.01508602804079467,
+      "lag": 1,
+      "verdict": "significant"
+    },
+    "CO2_ppm_mean": {
+      "n": 22,
+      "p": 5.349080735771934e-05,
+      "lag": 1,
+      "verdict": "significant"
+    },
+    "merra2_TOTEXTTAU": {
+      "n": 22,
+      "p": 0.09582421961151702,
+      "lag": 2,
+      "verdict": "not significant"
+    }
+  },
+  "action_distribution": {
+    "no_irrigate": 0.7291666666666666,
+    "light": 0.2708333333333333
+  },
+  "surrogate_balanced_accuracy": 0.9475081011393861,
+  "shap_driver_importance": {
+    "soil_moisture": 4.07675838470459,
+    "day_progress": 1.7056230306625366,
+    "co2_normalized": 1.1879141330718994,
+    "temp_anomaly": 0.8386817574501038,
+    "aerosol_aod": 0.12144946306943893,
+    "growth_stage": 0.0
+  }
+}
