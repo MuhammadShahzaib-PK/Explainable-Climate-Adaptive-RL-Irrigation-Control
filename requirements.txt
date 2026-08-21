@@ -1,0 +1,11 @@
+pandas
+numpy
+gymnasium
+stable-baselines3
+statsmodels
+xgboost
+shap
+scikit-learn
+matplotlib
+jupyter
+jupytext
